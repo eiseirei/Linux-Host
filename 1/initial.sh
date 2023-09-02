@@ -14,7 +14,7 @@ fi
 echo 
 echo "2. Обновляем пакетный менеджер"
 echo "Очистка кэша репозиториев"
-#sudo dnf clean all
+sudo dnf clean all
 echo "Загрузка и обновление пакетов"
 sudo dnf upgrade -y
 
