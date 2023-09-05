@@ -90,7 +90,7 @@ sudo dnf install -y php php-fpm
 echo "Активация модуля PHP 8.1"
 sudo dnf module list reset php -y
 sudo dnf module enable php:8.1 -y
-sudo dnf upgrade -y
+sudo dnf module install php:8.1 -y
 echo "Добавление в автозагрузку и запуск менеджер процессов PHP-FPM"
 sudo systemctl enable --now php-fpm.service
 echo "PHP 8 установлен"
