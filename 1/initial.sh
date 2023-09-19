@@ -9,6 +9,13 @@ else
 	sudo dnf install -y dnf-utils
 	sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 fi
+ echo "Удаление старого пакета Docker"
+ sudo dnf remove -y docker docker-* podman runc
+ echo "Установка пакета Docker"
+ sudo dnf install -y docker-ce docker-ce-cli containerd.io
+ echo "Добавление службы в автозагрузку и запуск Docker"
+ sudo systemctl enable --now docker.service
+ echo "Docker установлен"
 
 
 echo 
