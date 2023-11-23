@@ -21,6 +21,7 @@ fi
 echo 
 echo "2. Обновляем пакетный менеджер"
 echo "Очистка кэша репозиториев"
+sudo dnf config-manager --set-enabled ol9_codeready_builder
 sudo dnf clean all
 echo "Загрузка и обновление пакетов"
 sudo dnf upgrade -y
